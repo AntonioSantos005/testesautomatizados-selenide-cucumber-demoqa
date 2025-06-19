@@ -8,14 +8,14 @@ public class DragSteps {
 
 	DragPage dragPage = new DragPage();
 
-	@Quando("^arrastar o elemento para o outro$")
-	public void arrastarOElementoParaOOutro() throws Throwable {
-		dragPage.arrastarESoltarCaixaNaOutra();
+	@Quando("eu arrastar a caixa sobre a outra")
+	public void euArrastarACaixaSobreAOutra() {
+		dragPage.arrastarESoltarCaixa();
+	    
 	}
-
-	@Entao("^o sistema apresenta a mensagem soltou$")
-	public void oSistemaApresentaAMensagemSoltou() throws Throwable {
-		dragPage.validarArrastarESoltar();
+	@Entao("a caixa apresenta o texto {string}")
+	public void aCaixaApresentaOTexto(String texto) {
+		dragPage.validarCaixaFixaTexto(texto);
 	}
 
 }

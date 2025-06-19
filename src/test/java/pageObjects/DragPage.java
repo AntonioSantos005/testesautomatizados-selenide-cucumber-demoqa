@@ -1,28 +1,26 @@
 package pageObjects;
 
 import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.DragAndDropOptions.to;
 import static com.codeborne.selenide.Selenide.$;
-
-import org.openqa.selenium.By;
+import static com.codeborne.selenide.Selenide.sleep;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static utils.Utils.*;
-
 public class DragPage {
 	
-	//ELEMENTOS
-	SelenideElement caixaArrastavel = $(By.id("draggable"));
-	SelenideElement caixaEstatica = $(By.id("droppable"));
+	//ELMENTOS
+	private SelenideElement caixaMovel = $("#draggable");
+	private SelenideElement caixaFixa = $("#droppable");
 	
-	
-	public void arrastarESoltarCaixaNaOutra() {
-		arrasTarESoltar(caixaArrastavel, caixaEstatica);
+	//METODOS
+	public void arrastarESoltarCaixa() {
+		sleep(1500);
+		caixaMovel.dragAndDrop(to(caixaFixa).usingSeleniumActions());
 	}
 	
-	public void validarArrastarESoltar() {
-		caixaEstatica.shouldHave(exactText("Dropped!"));
+	public void validarCaixaFixaTexto(String texto) {
+		caixaFixa.shouldBe(exactText(texto));
 	}
 	
-
 }

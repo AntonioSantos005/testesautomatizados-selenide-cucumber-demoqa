@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber-reports/cucumber-report.html"},
 				 features = "classpath:features",
 				 glue = "stepsDefinitions",
-				 tags = "@Drag",
+				 //tags = "@Drag",
 				 snippets = SnippetType.CAMELCASE,
 				 monochrome = true,
 				 publish = true,

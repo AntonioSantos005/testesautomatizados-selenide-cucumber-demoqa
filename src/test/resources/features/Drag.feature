@@ -6,9 +6,9 @@
 Funcionalidade: Drag And Drop
 
 	@DragAndDrop
-	Cenario: Arrastar e soltar
-		Quando arrastar o elemento para o outro
-		Entao o sistema apresenta a mensagem soltou
+	Cenario: Arrastar e soltar com sucesso
+		Quando eu arrastar a caixa sobre a outra
+		Entao a caixa apresenta o texto "Dropped!"
 		
 
 		
