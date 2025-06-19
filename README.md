@@ -44,8 +44,8 @@ src
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/testes-selenide-demoqa.git
-cd testes-selenide-demoqa
+git clone https://github.com/AntonioSantos005/testesautomatizados-selenide-cucumber-demoqa.git
+cd testesautomatizados-selenide-cucumber-demoqa
 ```
 
 2. Execute os testes com Maven:
@@ -61,4 +61,4 @@ mvn clean test
 
 ## 👤 Autor
 
-Antônio de Sousa – [LinkedIn](https://www.linkedin.com/in/seu-perfil)
+Antônio de Sousa – [LinkedIn](https://www.linkedin.com/in/antoniosousas/)
